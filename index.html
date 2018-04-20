@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rebellion</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<script>
+  function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+          alert("Name must be filled out");
+          return false;
+      }
+
+      var x = document.forms["myForm"]["fage"].value;
+      if (x == "") {
+          alert("Age must be filled out");
+          return false;
+      }
+
+      var x = document.forms["myForm"]["fanimal"].value;
+      if (x == "") {
+          alert("Favorite animal must be filled out");
+          return false;
+      }
+
+      var x = document.forms["myForm"]["fwhy"].value;
+      if (x == "") {
+          alert("Why you want to join must be filled out");
+          return false;
+      }
+      else {
+        alert("Thank you for submitting, we will take contact!")
+      }
+  }
+</script>
+<body>
+
+  <h1>Register for the rebellion!</h1>
+
+  <p>Register here for joining the rebellion against the empire</p>
+
+  <form name="myForm" method="post"onsubmit="return validateForm()" method="post">
+
+    <h3>Name</h3> <input class="small" type="textarea" name="fname">
+    <h3>Age</h3> <input  type="radio" name="fage" value="0-16"> 0-16
+                 <input  type="radio" name="fage" value="17-25" checked> 17-25
+                 <input  type="radio" name="fage" value="26-60"> 26-60
+                 <input type="radio" name="fage" value="60 and above"> 60 or above
+    <h3>Favorite pet</h3> <input class="small" type"textarea" name="fanimal">
+    <h3>Why you want to register</h3> <textarea rows="6" cols="50" name="fwhy"></textarea>
+    <h3>About yourself (optinal)</h3> <textarea rows="6" cols="50" name="fabout"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>
